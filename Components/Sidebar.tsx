@@ -1,3 +1,4 @@
+import type { NextPage } from 'next';
 import Image from "next/image";
 import {
     ChartBarIcon,
@@ -9,7 +10,7 @@ import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiCompassFill } from "react-icons/ri";
 
 
-const Sidebar: React.FC = () => {
+const Sidebar: NextPage = () => {
   return (
     <section className="fixed top-0 z-40 flex flex-col 
     p-4 items-center bg-black w-[90px] 

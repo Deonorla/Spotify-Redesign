@@ -1,5 +1,6 @@
+import type { NextPage } from 'next';
 
-const Right : React.FC = () => {
+const Right: NextPage = () => {
   return (
     <div>Right</div>
   )

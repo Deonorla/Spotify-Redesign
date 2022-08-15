@@ -1,10 +1,11 @@
+import type { NextPage } from 'next';
 import { MdOutlineShortText } from "react-icons/md";
    interface Props {
     find: string;
     setFind: React.Dispatch<React.SetStateAction<string>>,
    }
 
-const Search: React.FC<Props>  = ({find, setFind} ) => {
+const Search: NextPage<Props>  = ({find, setFind} ) => {
 
   return (
     <div className=" max-w-[1150px] bg-[#1a1a1a] rounded-full overflow-hidden
