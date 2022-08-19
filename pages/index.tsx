@@ -18,6 +18,7 @@ const Home: NextPage = () => {
     return <Loader />;
   }
 
+ 
   return (
     <div className="">
       <Head>

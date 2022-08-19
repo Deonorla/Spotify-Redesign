@@ -34,8 +34,9 @@ import SpotifyProvider from "next-auth/providers/spotify";
      return {
        ...token,
        accessToken: refreshedTokens.access_token,
-       accessTokenExpires: Date.now() + refreshedTokens.expires_at * 1000,
+       accessTokenExpires: Date.now() + refreshedTokens.expires_at * 100000000000000,
        refreshToken: refreshedTokens.refresh_token ?? token.refreshToken, // Fall back to old refresh token
+       
      }
    } catch (error) {
      console.log(error)
@@ -46,6 +47,8 @@ import SpotifyProvider from "next-auth/providers/spotify";
      }
    }
  }
+
+
 
 export default NextAuth({
 
@@ -73,7 +76,7 @@ export default NextAuth({
          }
        }
        // Return previous token if the access token has not expired yet
-       if(Date.now() < token.accessTokenExpires){
+       if(Date.now() < token.accessTokenExpires) {
          return token;
        }
         //Access token has expired, try to update it
