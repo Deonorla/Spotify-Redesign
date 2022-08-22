@@ -1,16 +1,32 @@
 import type { NextPage } from "next";
 import { BsFillPauseFill, BsFillPlayFill } from  "react-icons/bs"
+import { useRecoilState } from "recoil";
+import { playingTrackState, playState } from "../atom/playAtom";
 
 interface Props {
     track: any,
+    chooseTrack: any,
 }
 
-const Poster: NextPage<Props> = ({ track }) => {
+const Poster: NextPage<Props> = ({ track, chooseTrack }) => {
+     const [play, setPlay] = useRecoilState(playState);
+     const [playingTrack, setPlayingTrack] = useRecoilState(playingTrackState);
+
+  const handlePlay = () =>{
+    chooseTrack(track); 
+    if(track.id === playingTrack.id){
+        setPlay(!play) 
+      
+     }
+  }
+
   return (
     <div className="w-[260px] h-[360px] rounded-[50px] overflow-hidden
     relative text-white/80 cursor-pointer hover:scale-105 
     hover:text-white/100 transition duration-200 ease-out
-    group-hover:mx-auto" >
+    group-hover:mx-auto"
+    onClick={handlePlay}
+    >
         <img src={track.albumUrl} 
         alt="" 
         className="h-full w-full absolute inset-0
@@ -23,11 +39,14 @@ const Poster: NextPage<Props> = ({ track }) => {
         ">
             <div className="h-10 w-10 bg-[#15883e] flex items-center justify-center rounded-full
             hover:bg-[#1db954] flex-shrink-0">
-                <BsFillPauseFill  className="text-xl"/>
-                <BsFillPlayFill  className="text- ml-[1px]"/>
+                { track.id === playingTrack.id && play ? (
+                    <BsFillPauseFill  className="text-xl"/>
+                ) : (
+                    <BsFillPlayFill  className="text- ml-[1px]"/>
+                 ) }
             </div>
 
-        </div>
+        </div> 
 
     </div>
   )

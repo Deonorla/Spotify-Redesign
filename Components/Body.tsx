@@ -7,9 +7,10 @@ import Poster from './Poster';
 
 interface Props {
   spotifyApi: any,
+  chooseTrack: any,
 }
 
-const Body: NextPage<Props>  = ({spotifyApi}) => { 
+const Body: NextPage<Props>  = ({spotifyApi, chooseTrack}) => { 
   const { data: session} = useSession();
   const { accessToken }: any = session;
   const [find, setFind] = useState<string>("");
@@ -32,7 +33,7 @@ const Body: NextPage<Props>  = ({spotifyApi}) => {
         id: track.id,
         artist: track.artists[0].name,
         title: track.name,
-        url: track.url,
+        url: track.uri,
         albumUrl: track.album.images[0].url,
         popularity: track.popularity,
       }
@@ -50,18 +51,18 @@ const Body: NextPage<Props>  = ({spotifyApi}) => {
    spotifyApi.getNewReleases(find).then((res: any)  => {
     setNewRelease(res.body.albums.items.map((track: any) => {
       return{
-        id: track.id,
-        artist: track.artists[0].name,
-        title: track.name,
-        url: track.url,
-        albumUrl: track.images[0].url,
+         id: track.id,
+         artist: track.artists[0].name,
+         title: track.name,
+         url: track.uri,
+         albumUrl: track.images[0].url,
       }
     }))
-   })
+  })
+
 
   },[find, accessToken])
 
- console.log(searchResults);
 
   return (
     <section className='bg-black ml-24 py-4 space-y-8 md:max-w-6xl 
@@ -74,13 +75,13 @@ const Body: NextPage<Props>  = ({spotifyApi}) => {
            <Poster 
            key={track.id} 
            track = {track} 
-          //  chooseTrack={chooseTrack} 
+           chooseTrack={chooseTrack} 
             />
          )) : searchResults.slice(0,4).map((track: any) => (
           <Poster 
           key={track.id} 
           track = {track}
-          // chooseTrack={chooseTrack} 
+          chooseTrack={chooseTrack} 
            />
          ))}
       </div>
