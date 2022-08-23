@@ -46,6 +46,10 @@ const Poster: NextPage<Props> = ({ track, chooseTrack }) => {
                  ) }
             </div>
 
+            <div className="text-[15px]">
+              <h4 className="font-extrabold truncate w-44">{track.title}</h4>
+              <h6 className="">{track.artist}</h6>
+            </div>
         </div> 
 
     </div>

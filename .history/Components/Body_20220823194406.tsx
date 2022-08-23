@@ -115,7 +115,7 @@ const Body: NextPage<Props>  = ({spotifyApi, chooseTrack}) => {
         "New Releases" : "Tracks" }</h2>
         <div className='space-y-3 border-2 border-[#262626] rounded-2xl
         p-3 bg-[#0d0d0d] overflow-y-scroll h-[1000px] md:h-96
-        scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded
+        scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thumb-rounded
         hover:scrollbar-thumb-gray-500 w-[830px]'>
           { searchResults.length === 0
             ? newRelease
