@@ -18,10 +18,9 @@ const Track: NextPage<Props> = ({track, chooseTrack}) => {
         />
         <div className="text-white text-sm font-semibold truncate w-[450px]">
         <h4>{track.title}</h4>
-        <p className="text-[rgb(179,179,179)] text-[13px] 
-        font-semibold">{track.artist}</p>
+        <p>{track.artist}</p>
         </div>
-      </div> 
+      </div>
     </div>
   )
 }
