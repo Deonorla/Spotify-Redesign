@@ -8,28 +8,20 @@ import { useRecoilState } from "recoil";
 
 interface Props {
   track: any,
-  chooseTrack: any,
+  choosetrack: any,
 }
 
 const Track: NextPage<Props> = ({track, chooseTrack}) => {
   const [hasLiked, setHasLiked] = useState<boolean>(false);
   const [play, setPlay] = useRecoilState(playState);
   const [playingTrack, setPlayingTrack] = useRecoilState(playingTrackState);
-   
-  const handlePlay = ( ) =>{
-    chooseTrack(track)
-    if(track.id === playingTrack.id){
-      setPlay(!play)
-    }
-  }
-
   return (
     <div className='flex items-center justify-between space-x-20 cursor-default
     hover:bg-white/10 py-4  px-2 rounded-lg group transition ease-out '>
       <div className='flex items-center'>
         <img 
         src={track.albumUrl} 
-        alt=""  
+        alt="" 
         className="rounded-xl h-12 w-12 
         object-cover mx-3"
         />
@@ -40,7 +32,7 @@ const Track: NextPage<Props> = ({track, chooseTrack}) => {
         </div>
       </div> 
 
-      <div className="md:ml-auto flex items-center mr-24">
+      <div className="md:ml-auto flex items-center space-x-2.5">
         <div className="text-white flex space-x-1 text-sm 
         font-semibold">   
            <ImHeadphones className="text-lg " />
@@ -53,20 +45,18 @@ const Track: NextPage<Props> = ({track, chooseTrack}) => {
            ${ hasLiked ? "text-[#1ed760]": "text-[#868686]" } ` }
            onClick = {()=> setHasLiked(!hasLiked)} />
 
-           { track.id === playingTrack.id && play ? (
+           { track.id === playingTrackState.id && play ? (
              <div className="h-10 w-10 rounded-full border 
              border-[#15883e] flex items-center justify-center
-             absolute -right-0.5 bg-[#15883e] icon hover:scale-110" 
-             onClick={handlePlay}>
+             absolute -right-0.5 bg-[#15883e] icon hover:scale-110" >
               <BsFillPauseFill  
               className="text-white text-xl" />
              </div>
 
            ) : ( 
             <div className="h-10 w-10 rounded-full border 
-            border-white/50 flex items-center justify-center
-            absolute -right-0.5 bg-black  hover:bg-[#14883e] icon hover:scale-110"
-            onClick={handlePlay}>
+            border-[#15883e] flex items-center justify-center
+            absolute -right-0.5 bg-[#15883e] icon hover:scale-110">
                 <BsFillPlayFill className=" text-white text-xl ml-[1px]"/>
             </div>
 

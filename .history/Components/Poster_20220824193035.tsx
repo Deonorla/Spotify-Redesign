@@ -21,7 +21,7 @@ const Poster: NextPage<Props> = ({ track, chooseTrack }) => {
   }
 
   return (
-    <div className="w-[14rem] h-[360px] rounded-[50px] overflow-hidden
+    <div className="w-[12rem] h-[360px] rounded-[50px] overflow-hidden
     relative text-white/80 cursor-pointer hover:scale-105 
     hover:text-white/100 transition duration-200 ease-out
     group-hover:mx-auto"

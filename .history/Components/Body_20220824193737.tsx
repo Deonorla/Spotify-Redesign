@@ -66,7 +66,7 @@ const Body: NextPage<Props>  = ({spotifyApi, chooseTrack}) => {
 
 
   return (
-    <section className='bg-black ml-24 py-4 space-y-8 md:max-w-5xl
+    <section className='bg-black ml-24 py-4  md:max-w-6xl 
     flex-grow md:mr-2.5' >
       <Search find={find} setFind={setFind} />
 

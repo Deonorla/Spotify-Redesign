@@ -66,12 +66,12 @@ const Body: NextPage<Props>  = ({spotifyApi, chooseTrack}) => {
 
 
   return (
-    <section className='bg-black ml-24 py-4 space-y-8 md:max-w-5xl
+    <section className='bg-black ml-24 py-4 space-y-8 md:max-w-6xl 
     flex-grow md:mr-2.5' >
       <Search find={find} setFind={setFind} />
 
       <div className='grid overflow-y-scroll scrollbar-hide h-96 py-4 grid-cols-2 
-      lg:grid-cols-3 xl:grid-cols-4 gap-[12px] p-4'>
+      lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-4 p-4'>
          {searchResults.length === 0 ? newRelease.slice(0,4).map((track: any)=>(
            <Poster 
            key={track.id} 
@@ -116,7 +116,7 @@ const Body: NextPage<Props>  = ({spotifyApi, chooseTrack}) => {
         <div className='space-y-3 border-2 border-[#262626] rounded-2xl
         p-3 bg-[#0d0d0d] overflow-y-scroll h-[1000px] md:h-96
         scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded
-        hover:scrollbar-thumb-gray-500 w-[700px]'>
+        hover:scrollbar-thumb-gray-500 w-[500px]'>
           { searchResults.length === 0
             ? newRelease
             .slice(4, newRelease.length)

@@ -40,7 +40,7 @@ const Track: NextPage<Props> = ({track, chooseTrack}) => {
         </div>
       </div> 
 
-      <div className="md:ml-auto flex items-center mr-24">
+      <div className="md:ml-auto flex items-center space-x-2.5 mr-12">
         <div className="text-white flex space-x-1 text-sm 
         font-semibold">   
            <ImHeadphones className="text-lg " />

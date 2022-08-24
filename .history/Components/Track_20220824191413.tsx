@@ -29,7 +29,7 @@ const Track: NextPage<Props> = ({track, chooseTrack}) => {
       <div className='flex items-center'>
         <img 
         src={track.albumUrl} 
-        alt=""  
+        alt="" 
         className="rounded-xl h-12 w-12 
         object-cover mx-3"
         />
@@ -40,7 +40,7 @@ const Track: NextPage<Props> = ({track, chooseTrack}) => {
         </div>
       </div> 
 
-      <div className="md:ml-auto flex items-center mr-24">
+      <div className="md:ml-auto flex items-center space-x-2.5">
         <div className="text-white flex space-x-1 text-sm 
         font-semibold">   
            <ImHeadphones className="text-lg " />

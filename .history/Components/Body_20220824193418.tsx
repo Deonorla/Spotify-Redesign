@@ -66,12 +66,12 @@ const Body: NextPage<Props>  = ({spotifyApi, chooseTrack}) => {
 
 
   return (
-    <section className='bg-black ml-24 py-4 space-y-8 md:max-w-5xl
+    <section className='bg-black ml-24 py-4 space-y-8 md:max-w-6xl 
     flex-grow md:mr-2.5' >
       <Search find={find} setFind={setFind} />
 
       <div className='grid overflow-y-scroll scrollbar-hide h-96 py-4 grid-cols-2 
-      lg:grid-cols-3 xl:grid-cols-4 gap-[12px] p-4'>
+      lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-4 p-4'>
          {searchResults.length === 0 ? newRelease.slice(0,4).map((track: any)=>(
            <Poster 
            key={track.id} 
