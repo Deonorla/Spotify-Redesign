@@ -83,7 +83,7 @@ export default NextAuth({
          }
        }
        // Return previous token if the access token has not expired yet
-       if(Date.now() <  token.expires_at * 1000 ) {
+       if(Date.now() <  token.expires_at * 100 ) {
          return token;
        }
         //Access token has expired, try to update it

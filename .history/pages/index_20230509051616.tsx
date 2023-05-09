@@ -9,10 +9,9 @@ import Loader from '../Components/Loader';
 const Home: NextPage = () => {
   const router = useRouter();
   const {status, data: session} = useSession({
-     required: true,
-     onUnauthenticated() {
-         router.push('/auth/signin');
-     },
+   onUnauthenticated(){
+    router.push('/auth/signin')
+   },
   });
   
   if(status === "loading"){

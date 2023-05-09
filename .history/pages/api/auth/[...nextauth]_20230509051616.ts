@@ -83,14 +83,14 @@ export default NextAuth({
          }
        }
        // Return previous token if the access token has not expired yet
-       if(Date.now() <  token.expires_at * 1000 ) {
+       if(Date.now() < token.accessTokenExpires ) {
          return token;
        }
         //Access token has expired, try to update it
         return refreshAccessToken(token)
       },
       async session({ session, token }) {
-         session.user = token
+         session.user = token.user
          session.accessToken = token.accessToken
          session.error = token.error
          return session
