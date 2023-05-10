@@ -16,7 +16,10 @@ const Body: NextPage<Props>  = ({spotifyApi, chooseTrack}) => {
   const  accessToken : any = session?.accessToken;
   const [find, setFind] = useState<string>("");
   const [searchResults, setSearchResults] = useState<string[]>([]);
-  const [newRelease, setNewRelease] = useState<string[]>([]); 
+  const [newRelease, setNewRelease] = useState<string[]>([]);
+
+  console.log(newRelease)
+ 
   
  useEffect(()=>{
    if(!accessToken) return;
