@@ -2,9 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains : [
-      "rb.gy",
-      "storage.googleapis.com"
-  ],
+    domains : ["rb.gy"],
   },
 }

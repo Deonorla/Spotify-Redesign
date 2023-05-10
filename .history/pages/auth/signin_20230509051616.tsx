@@ -28,11 +28,11 @@ const signin: NextPage = ({providers}: any) => {
         </Head>
 
       <Image
-         src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png"
+         src="https://rb.gy/y9mwtb"
          height={250}
          width={600}
          objectFit ="contain"
-         className="animate-pulse m-8 "
+         className="animate-pulse"
       />
       {Object.values(providers).map((provider: any) => (
         <div key={provider.id}>

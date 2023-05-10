@@ -32,7 +32,7 @@ const signin: NextPage = ({providers}: any) => {
          height={250}
          width={600}
          objectFit ="contain"
-         className="animate-pulse m-8 "
+         className="animate-pulse"
       />
       {Object.values(providers).map((provider: any) => (
         <div key={provider.id}>
