@@ -88,7 +88,7 @@
   "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.194.tgz"
   "version" "4.14.194"
 
-"@types/node@16.18.0":
+"@types/node@^16.18.0":
   "integrity" "sha512-LqYqYzYvnbCaQfLAwRt0zboqnsViwhZm+vjaMSqcfN36vulAg7Pt0T83q4WZO2YOBw3XdyHi8cQ88H22zmULOA=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-16.18.0.tgz"
   "version" "16.18.0"
