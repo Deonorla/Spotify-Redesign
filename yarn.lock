@@ -88,10 +88,10 @@
   "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.194.tgz"
   "version" "4.14.194"
 
-"@types/node@^16.18.0":
-  "integrity" "sha512-LqYqYzYvnbCaQfLAwRt0zboqnsViwhZm+vjaMSqcfN36vulAg7Pt0T83q4WZO2YOBw3XdyHi8cQ88H22zmULOA=="
-  "resolved" "https://registry.npmjs.org/@types/node/-/node-16.18.0.tgz"
-  "version" "16.18.0"
+"@types/node@^16.0.0":
+  "integrity" "sha512-TmCW5HoZ2o2/z2EYi109jLqIaPIi9y/lc2LmDCWzuCi35bcaQ+OtUh6nwBiFK7SOu25FAU5+YKdqFZUwtqGSdg=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-16.0.0.tgz"
+  "version" "16.0.0"
 
 "@types/prop-types@*":
   "integrity" "sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w=="
