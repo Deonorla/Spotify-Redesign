@@ -9,6 +9,8 @@ function Loader() {
           <Image
             src=" https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png"
             layout="fill"
+            width="100px"
+            height="100px"
             objectFit="contain"
             className="animate-pulse"
           />

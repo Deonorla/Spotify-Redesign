@@ -18,7 +18,7 @@ const Dashboard: NextPage = () =>{
     const { data: session } = useSession();
     const accessToken = session?.accessToken;
     
-    const [playingTrack, setPlayingTrack] = useRecoilState<any>(playingTrackState);
+    const [playingTrack, setPlayingTrack] = useRecoilState(playingTrackState);
     const [showPlayer, setShowPlayer] = useState<boolean>(false)
     
     useEffect(()=> {
@@ -35,11 +35,9 @@ const Dashboard: NextPage = () =>{
            <Body spotifyApi = {spotifyApi} chooseTrack={chooseTrack} />
            <Right spotifyApi = {spotifyApi} chooseTrack={chooseTrack} />
             
-            {showPlayer && (
-                <div className='fixed bottom-0 left-0 right-0 z-50'>
-                    <Player accessToken={accessToken} trackUri={playingTrack.uri} />
-                </div> 
-            )}
+           <div className='fixed bottom-0 left-0 right z-50'>
+            <Player />
+           </div>
         </main>
     )
 }

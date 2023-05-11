@@ -7,7 +7,7 @@ function Loader() {
       <div className="pt-40 flex flex-col items-center space-y-4">
         <span className="relative w-[400px] h-[250px] lg:w-[550px] lg:h-[240px]">
           <Image
-            src=" https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png"
+            src="https://rb.gy/y9mwtb"
             layout="fill"
             objectFit="contain"
             className="animate-pulse"

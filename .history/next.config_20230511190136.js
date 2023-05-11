@@ -5,7 +5,7 @@ module.exports = {
     domains : [
       "rb.gy",
       "storage.googleapis.com",
-      "upload.wikimedia.org"
+      "encrypted-tbn0.gstatic.com"
   ],
   },
 }

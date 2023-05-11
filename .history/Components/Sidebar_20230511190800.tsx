@@ -15,7 +15,7 @@ const Sidebar: NextPage = () => {
     <section className="fixed top-0 z-40 flex flex-col 
     p-4 items-center bg-black w-[90px] 
     h-screen space-y-8">
-         <Image src=" https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" 
+         <Image src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9PyX9UHCbAQRZLGtwa38lmNMAxVTgY_iO8w&usqp=CAU" 
             width={56} 
             height={56} 
             objectFit="contain" 
