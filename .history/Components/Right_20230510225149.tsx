@@ -23,13 +23,13 @@ const Right = ({ spotifyApi, chooseTrack }: Props) => {
     if (!accessToken) return;
     spotifyApi.getMyRecentlyPlayedTracks({ limit: 20 }).then((res: any) => {
       setRecentlyPlayed(
-        res.body.items.map((track: any) => {
+        res.body.tracks.items.map((track: any) => {
           return {
-            id: track.track.id,
-            artist: track.track.artists[0].name,
-            title: track.track.name,
-            uri: track.track.uri,
-            albumUrl: track.track.album.images[0].url,
+            id: track.id,
+            artist: track.artists[0].name,
+            title: track.name,
+            uri: track.uri,
+            albumUrl: track.album.images[0].url,
           };
         })
       );
@@ -56,14 +56,9 @@ const Right = ({ spotifyApi, chooseTrack }: Props) => {
         </div>
         <div className="space-y-4 overflow-y-scroll overflow-x-hidden h-[250px] md:h-[400px] scrollbar-hide ">
           {recentlyPlayed.map((track, index) => (
-            <RecentlyPlayed
-              key={index}
-              track={track}
-              chooseTrack={chooseTrack}
-            />
+            <RecentlyPlayed />
           ))}
         </div>
-        <button className="btn">View All</button>
       </div>
     </section>
   );

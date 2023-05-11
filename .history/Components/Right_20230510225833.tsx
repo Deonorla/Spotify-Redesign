@@ -56,14 +56,9 @@ const Right = ({ spotifyApi, chooseTrack }: Props) => {
         </div>
         <div className="space-y-4 overflow-y-scroll overflow-x-hidden h-[250px] md:h-[400px] scrollbar-hide ">
           {recentlyPlayed.map((track, index) => (
-            <RecentlyPlayed
-              key={index}
-              track={track}
-              chooseTrack={chooseTrack}
-            />
+            <RecentlyPlayed />
           ))}
         </div>
-        <button className="btn">View All</button>
       </div>
     </section>
   );

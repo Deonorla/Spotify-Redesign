@@ -12,7 +12,7 @@ import SpotifyProvider from "next-auth/providers/spotify";
     const urlSearchParams = {
       client_id: process.env.SPOTIFY_CLIENT_ID?.toString,
       client_secret: process.env.SPOTIFY_CLIENT_SECRET,
-      grant_type: "client_credentials",
+      grant_type: "authorization_code",
       refresh_token: token.refreshToken,
     };
 

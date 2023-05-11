@@ -17,6 +17,7 @@ const signin: NextPage = ({providers}: any) => {
          }
     },[session])
 
+    
     if(session) return <Loader />;
   
   return (
