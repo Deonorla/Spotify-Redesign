@@ -17,7 +17,6 @@ const spotifyApi = new SpotifyWebApi({
 const Dashboard: NextPage = () =>{ 
     const { data: session } = useSession();
     const accessToken = session?.accessToken;
-    
     const [playingTrack, setPlayingTrack] = useRecoilState<any>(playingTrackState);
     const [showPlayer, setShowPlayer] = useState<boolean>(false)
     
